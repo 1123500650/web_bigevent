@@ -19,7 +19,7 @@
       <div class="title-box"></div>
       <!-- 登录的div -->
       <div class="login-box">
-        <form class="layui-form" action="">
+        <form class="layui-form" id="form_login" action="">
           <!-- 用户名 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
@@ -38,7 +38,7 @@
             <input
               type="password"
               name="pwd"
-              lay-verify="required"
+              lay-verify="required|pwd"
               autocomplete="off"
               placeholder="请输入密码"
               class="layui-input"
@@ -61,7 +61,7 @@
       </div>
       <!-- 注册的div -->
       <div class="reg-box">
-        <form class="layui-form" action="">
+        <form class="layui-form" id="form_reg" action="">
           <!-- 用户名 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
@@ -80,7 +80,7 @@
             <input
               type="password"
               name="pwd"
-              lay-verify="required"
+              lay-verify="required|pwd"
               autocomplete="off"
               placeholder="请输入密码"
               class="layui-input"
@@ -91,8 +91,8 @@
             <i class="layui-icon layui-icon-password"></i>
             <input
               type="password"
-              name="pwd"
-              lay-verify="required"
+              name="repwd"
+              lay-verify="required|repwd"
               autocomplete="off"
               placeholder="请再次输入密码"
               class="layui-input"
@@ -101,6 +101,7 @@
           <!-- 注册按钮 -->
           <div class="layui-form-item">
             <button
+              id="reg_btn"
               class="layui-btn layui-btn-fluid layui-btn-normal"
               lay-submit
             >
@@ -116,7 +117,8 @@
     </div>
 
     <script src="./assets/lib/jquery.js"></script>
-    <script src="./assets/js/login.js"></script>
     <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/js/baseAPI.js"></script>
+    <script src="./assets/js/login.js"></script>
   </body>
 </html>
